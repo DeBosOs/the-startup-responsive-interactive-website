@@ -1,15 +1,11 @@
-header ul {
-    list-style-type: none;
+header {
     display: flex;
     justify-content: space-between;
 }
 
-#logo{
-    width: 15%;
-}
-
-#hamburger{
-    width: 15%;
+header ul {
+    list-style-type: none;
+    display: flex;
 }
 
 .hero {
