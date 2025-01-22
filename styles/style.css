@@ -8,6 +8,16 @@ header ul {
     display: flex;
 }
 
+header ul li {
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
 .hero {
-    background-color: #E18864;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
+.hero img {
+    min-width: 100%;
 }
