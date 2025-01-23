@@ -1,11 +1,251 @@
-/*dit wordt de stylesheet*/
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-section {
-    margin-top: 2vh;
+body {
+    /* Kleuren */
+
+    /* Witte achtergrondkleur */
+    --primary-background-color: #ffffff;
+    /* Zwarte achtergrondkleur */
+    --secondary-background-color: #000;
+    /* Tekstkleur zwart */
+    --primary-text-color: #000;
+    /* Tekstkleur wit */
+    --secondary-text-color: #ffffff;
+    /* Check kleur groen */
+    --error-color: #22C55E;
+
+    /* Fonts */
+    --font-header: 'American-Typewriter-Bold', sans-serif;
+    --font-paragraph: 'American-Typewriter-Regular', sans-serif;
+
+    /* Decoratie */
+
+    /* Voor kleine ronde vormen */
+    --small-rounded: 4px;
+    /* Voor medium ronde vormen */
+    --medium-rounded: 16px;
+    /* Voor grote ronde vormen */
+    --big-rounded: 100px;
+}
+
+/* Typografie  */
+@font-face {
+    font-family: 'American-Typewriter-Regular';
+    src: url(../fonts/american-typewriter-regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'American-Typewriter-Bold';
+    src: url(../fonts/american-typewriter-bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 800;
+}
+
+/* Classes kleuren */
+
+/* Witte achtergrond */
+.primaryBackground {
+    background-color: var(--primary-background-color);
+}
+ 
+/* Zwarte achtergrond */
+.secondaryBackground {
+    background-color: var(--secondary-background-color);
+}
+
+/* Gele highlight */
+.primaryHighlight {
+    background-color: var(--primary-highlight-color);
+}
+
+/* Roze highlight */
+.secondaryHighlight {
+    background-color: var(--secondary-highlight-color);
+}
+
+/* Zwarte tekst */
+.primaryTekst {
+    color: var(--primary-text-color);
+}
+
+/* Witte tekst */
+.secondaryTekst {
+    color: var(--secondary-text-color);
+}
+
+
+/* Tekst elementen  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+H6 {
+    font-family: var(--font-header);
+    color: var(--primary-text-color);
+    margin: 0em 0em 1em 0em;
+    padding: 0;
+}
+
+h1 {
+    font-size: clamp(2.1875rem, 1.9022rem + 1.3043vw, 2.725rem);
+    line-height: 115%;
+}
+
+h2 {
+    font-size: clamp(1.375rem, 1.2054rem + 0.7143vw, 1.875rem);
+    line-height: 110%;
+}
+
+h3 {
+   font-size: clamp(1.125rem, 1.0826rem + 0.1786vw, 1.25rem);
+    line-height: 115%;
+}
+
+h4 {
+    font-size: clamp(1.25rem, 1.0846rem + 0.8824vw, 2.1875rem);
+    line-height: 118%;
+}
+
+h5 {
+    font-size: clamp(1.125rem, 0.9926rem + 0.7059vw, 1.875rem);
+    line-height: 118%;
+}
+
+h6 {
+    font-size: clamp(1rem, 0.9007rem + 0.5294vw, 1.5625rem);
+    line-height: 118%;
+}
+
+/* Paragraaf */
+p {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 180%;
+    font-family: var(--font-paragraph);
+}
+
+/*  Pricing elementen  */
+
+.price {
+    display: flex;
+    flex-direction: row;
+}
+
+.price-left {
+    font-size: 60px;
+}
+
+.price-right {
+    font-size: 30px;
+}
+
+.price-left-small {
+    font-size: 36px;
+}
+
+.price-right-small {
+    font-size: 20px;
+}
+
+/*  List elementen  */
+
+ul {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 140%;
+    font-family: var(--font-paragraph);
+}
+
+ol {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 140%;
+    font-family: var(--font-paragraph);
+}
+
+/*  Formulier elementen  */
+
+label {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 150%;
+    font-family: var(--font-paragraph);
+    display: block;
+}
+
+input {
+    background-color: var(--primary-background-color);
+    border: solid 2px var(--secondary-background-color);
+    border-radius: var(--big-rounded);
+    padding: .8em 1em;
+    color: var(--primary-text-color);
+
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 1.5em;
+    font-family: var(--font-paragraph);
+
+}
+
+/* Verzenden knop formulier */
+input[type="submit"] {
+    background-color: var(--secondary-background-color);
+    color: white;
+    padding: 0.7em 1.4em;
+    border: none;
+    border-radius: var(--rounded);
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-highlight-color);
+    transition: transform .2s ease-in-out;
+    transform: scale(1.05);
+}
+
+input:user-invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+fieldset label {
+    align-items: center;
+    display: flex;
+}
+
+legend {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 1.5em;
+    font-family: var(--font-paragraph);
+    display: block;
+    margin-bottom: 0.8em;
+}
+
+/* Knoppen */
+#knoppen {
+    padding: 3em 0em 3em 0em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#knoppen p {
+    margin: -0.9em 0em 1em 0em;
+}
+
+/* links */
+a {
+    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    line-height: 1.5em;
+    font-family: var(--font-paragraph);
+    color: var(--primary-text-color);
+    transition: transform ease-in-out .2s;
+}
+
+a:hover {
+    color: var(--secondary-highlight-color);
+    transition: ease-in-out .2s;
 }
