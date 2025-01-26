@@ -18,7 +18,13 @@ https://debosos.github.io/the-startup-responsive-interactive-website/
 De belangrijkste functie op deze pagina is de interactie met de gebruiker. Het doel van een webshop is uiteraard om producten te kopen. Hierom kan er op de winkelmandjes geklikt worden om producten aan te schaffen.
 Om te laten zien dat dit gelukt is, wordt de outline om de knop een andere kleur en stuitert het mandje bovenin om aan te tonen dat daar iets mee gebeurd is.
 
-In mijn html maak ik gebruik van 
+In mijn css en JavaScript maak ik gebruik van CamelCase.
+https://github.com/DeBosOs/the-startup-responsive-interactive-website/blob/5ba5cc7efca5856891d08a30e2152de517cd25bc/scripts/script.js#L3-L13
+
+https://github.com/DeBosOs/the-startup-responsive-interactive-website/blob/5ba5cc7efca5856891d08a30e2152de517cd25bc/index.html#L22
+
+Om de code zo overzichtelijk mogelijk te houden heb ik de onderdelen van de pagina opgedeeld in stukjes. Deze staan overal bij gecomment.
+https://github.com/DeBosOs/the-startup-responsive-interactive-website/blob/5ba5cc7efca5856891d08a30e2152de517cd25bc/styles/style.css#L1-L63
 
 ## Bronnen
 
