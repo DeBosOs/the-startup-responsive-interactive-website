@@ -52,7 +52,7 @@ body {
 .primaryBackground {
     background-color: var(--primary-background-color);
 }
- 
+
 /* Zwarte achtergrond */
 .secondaryBackground {
     background-color: var(--secondary-background-color);
@@ -104,7 +104,7 @@ h2 {
 }
 
 h3 {
-   font-size: clamp(1.125rem, 1.0826rem + 0.1786vw, 1.25rem);
+    font-size: clamp(1.125rem, 1.0826rem + 0.1786vw, 1.25rem);
     line-height: 115%;
 }
 
